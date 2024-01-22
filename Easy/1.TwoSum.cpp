@@ -19,6 +19,8 @@ public:
 //Time Complexity: O(N^2)
 //Space Complexity: O(1)
 
+
+//Follow-up: Can you come up with an algorithm that is less than O(N^2) time complexity?
 class Solution_2 {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
@@ -34,6 +36,7 @@ public:
                 res[0] = numsmap[temp];
                 res[1] = i;
                 return res;
+
             }
         }
         return res;
