@@ -25,6 +25,7 @@ class Solution_2 {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
         vector<int> res(2);
+        //用hashmap 建立將過去掃過的數字記住
         std::map<int, int> numsmap; //key紀錄數值，value紀錄位置
         int temp;
         for (int i = 0; i < nums.size(); i++) {
