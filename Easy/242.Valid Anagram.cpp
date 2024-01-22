@@ -2,19 +2,22 @@ class Solution {
 public:
     bool isAnagram(string s, string t) {
         int letterDistribution[26] = {};
-        int letterAscii;
+        int letterAsciiS, letterAsciiT;
         bool res = true;
-        for (int i = 0; i < s.length(); i++){
-            letterAscii = int(s.at(i));
-            letterDistribution[letterAscii-97]++; 
-        }
-        for (int j = 0; j < t.length(); j++){
-            letterAscii = int(t.at(j));
-            letterDistribution[letterAscii-97]--; 
-        }
-        for (int k = 0; k < 26; k++){
-            if( letterDistribution[k] != 0){
-                res =false;
+        if (s.length() != t.length()){
+            res = false;
+        }else{
+            for (int i = 0; i < s.length(); i++){
+                letterAsciiS = int(s.at(i));
+                letterDistribution[letterAsciiS-97]++;
+                letterAsciiT = int(t.at(i));
+                letterDistribution[letterAsciiT-97]--;  
+            }
+            for (int k = 0; k < 26; k++){
+                if( letterDistribution[k] != 0){
+                    res =false;
+                    break;
+                }
             }
         }
         return res;
