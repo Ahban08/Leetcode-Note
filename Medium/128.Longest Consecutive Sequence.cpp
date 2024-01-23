@@ -17,9 +17,7 @@ public:
                     res = tmpRes;
                 }else if(value == pair.first-1){
                     value = pair.first;
-                    if( ++tmpRes > res){
-                        res = tmpRes;
-                    }
+                    res = max(++tmpRes,res);
                 }else{
                     value = pair.first;
                     tmpRes = 1;
@@ -42,9 +40,7 @@ public:
             if( numsSet.find(value-1) == numsSet.end()){
                 tmpRes = 0;
                 while( numsSet.find(value+tmpRes) != numsSet.end()){
-                    if( ++tmpRes > res){
-                        res = tmpRes;
-                    }
+                    res = max(++tmpRes,res);
                 }
             }
         }
