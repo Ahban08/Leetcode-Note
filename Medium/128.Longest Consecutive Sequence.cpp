@@ -2,7 +2,7 @@ class Solution {
 public:
     int longestConsecutive(vector<int>& nums) {
         int res = 0, tmpRes = 0;
-        int tmp;
+        int value;
         std::map<int, int> numsmap;//key紀錄nums數值，value紀錄出現次數
 
         for(int i = 0; i < nums.size(); i++ ){
@@ -12,16 +12,16 @@ public:
             if( pair.second > 0){
                 //cout<<"pair"<< pair.first<<":"<<pair.second<<"\n";
                 if ( !res ){
-                    tmp = pair.first;
+                    value = pair.first;
                     tmpRes++;
                     res = tmpRes;
-                }else if(tmp == pair.first-1){
-                    tmp = pair.first;
+                }else if(value == pair.first-1){
+                    value = pair.first;
                     if( ++tmpRes > res){
                         res = tmpRes;
                     }
                 }else{
-                    tmp = pair.first;
+                    value = pair.first;
                     tmpRes = 1;
                 }
             }
