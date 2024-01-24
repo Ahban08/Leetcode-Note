@@ -19,5 +19,6 @@ public:
         return res;
     }
 };
-//Time Complexity: O(N)
-//Space Complexity: O(N)
+//M (the number of strings) and N (the average length of strings)
+//Time Complexity: O(M*NlogN)
+//Space Complexity: O(M)
