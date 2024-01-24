@@ -9,9 +9,9 @@ public:
         }else{
             for (int i = 0; i < s.length(); i++){
                 letterAsciiS = int(s.at(i));
-                letterDistribution[letterAsciiS-97]++;
+                letterDistribution[letterAsciiS-int('a')]++;
                 letterAsciiT = int(t.at(i));
-                letterDistribution[letterAsciiT-97]--;  
+                letterDistribution[letterAsciiT-int('a')]--;  
             }
             for (int k = 0; k < 26; k++){
                 if( letterDistribution[k] != 0){
