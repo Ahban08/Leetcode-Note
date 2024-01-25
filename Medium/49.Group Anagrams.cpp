@@ -3,7 +3,6 @@ public:
     vector<vector<string>> groupAnagrams(vector<string>& strs) {
         vector<vector<string>> res;
         std::map<string, int> groupMap;
-        int set= 0;
         for (int i = 0; i < strs.size(); i++){
             string sortedStr = strs[i];
             std::sort (sortedStr.begin(), sortedStr.end());
@@ -29,7 +28,6 @@ public:
     vector<vector<string>> groupAnagrams(vector<string>& strs) {
         vector<vector<string>> res;
         std::map<string, int> groupMap;
-        int set= 0;
         for (int i = 0; i < strs.size(); i++){
             int letterDistribution[26] ={};
             for (int j = 0; j < strs[i].length(); j++){
