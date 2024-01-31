@@ -20,7 +20,7 @@ public:
             return res;
         }
 
-        for(int i = 0;  front < back; i++){
+        while( front < back ){
             if( str.at(front) != str.at(back)){
                 res = false;
                 break;
