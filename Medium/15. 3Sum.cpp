@@ -12,6 +12,8 @@ public:
         sort(nums.begin(), nums.end());
         for(int i = 0; i < nums.size()-2; i++){
             int target = nums[i];
+            if( target > 0)
+                break;
             if( i > 0 && target == nums[i-1]){
                 continue;
             }
