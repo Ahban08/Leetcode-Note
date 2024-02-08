@@ -59,7 +59,7 @@ public:
                 }else{
                     right = mid - 1;
                 }
-            }else if( nums[left] <= nums[mid]){ //左有序
+            }else{ //左有序
                 if(nums[left] <= target && target < nums[mid]){
                     right = mid - 1;
                 }else{
