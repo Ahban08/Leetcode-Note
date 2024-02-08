@@ -49,8 +49,6 @@ public:
             if(nums[mid] == target){
                 res = mid;
                 break;
-            }else if(left == right){
-                break;
             }
             
             if( nums[mid] <= nums[right]){ //右有序
