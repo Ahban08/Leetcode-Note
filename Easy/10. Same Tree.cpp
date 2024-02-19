@@ -1,3 +1,4 @@
+//Recursive
 class Solution {
 public:
     bool isSameTree(TreeNode* p, TreeNode* q) {
@@ -21,4 +22,4 @@ public:
     }
 };
 //Time Complexity: O(N)
-//Space Complexity: O(1)
+//Space Complexity: O(logN)
