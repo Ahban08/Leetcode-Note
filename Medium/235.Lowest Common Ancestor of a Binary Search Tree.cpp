@@ -43,20 +43,15 @@ public:
 class Solution_2 {
 public:
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
-        TreeNode* res;
-        stack<TreeNode*> nodeStack;
+        TreeNode* res = root;
 
-        nodeStack.push(root);
-        while(!nodeStack.empty()){
-            TreeNode *node = nodeStack.top();
-            nodeStack.pop();
-            int value = node->val;
+        while(1){
+            int value = res->val;
             if( p->val < value && q->val < value){
-                nodeStack.push(node->left);
+                res = res->left;
             }else if( p->val > value && q->val > value){
-                nodeStack.push(node->right);
+                res = res->right;
             }else{
-                res = node;
                 break;
             }
         }
