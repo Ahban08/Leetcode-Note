@@ -65,7 +65,7 @@ private:
  * bool param_2 = obj->search(word);
  */
 
-////N為word長度，M為'.'出現次數
+//N為word長度，M為'.'出現次數
 //addWord
 //Time Complexity: O(N)
 //Space Complexity: O(N)
